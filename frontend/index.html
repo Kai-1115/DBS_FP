@@ -2,24 +2,35 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>NYCU 小精靈 - 光復校區地圖</title>
+    <title>NYCU 小精靈 - 校園路線查詢</title>
 
-    <link rel="stylesheet" href="assets/map.css">
-    <!-- Leaflet CSS -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 </head>
 
 <body>
 
-<h1 style="text-align:center;">NYCU 光復校區互動地圖</h1>
-
 <div id="map"></div>
 
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<!-- Bottom routing panel -->
+<div id="route-panel">
+    <div class="panel-header">路線規劃</div>
 
-<script src="assets/coords.js"></script>
-<script src="assets/map.js"></script>
+    <div class="panel-body">
+        <label>起點</label>
+        <input id="start-input" placeholder="例如：工四">
+
+        <label>終點</label>
+        <input id="end-input" placeholder="例如：圖書館">
+
+        <button id="go-btn" onclick="searchRoute()">開始導航</button>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="map.js"></script>
 
 </body>
 </html>
